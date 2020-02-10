@@ -1,7 +1,6 @@
 com/salesforce/data/ExternalDataSet.class
 com/salesforce/commons/ExternalObjectAttribute.class
 com/salesforce/ExternalDataSourceFactory.class
-com/salesforce/source/ExternalSalesForceSource$BatchIdAndResultId.class
 com/salesforce/DatasourceSpringConfiguration.class
 com/salesforce/commons/ConnectionParameters.class
 com/salesforce/commons/ExternalObject.class
