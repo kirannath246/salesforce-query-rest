@@ -188,7 +188,11 @@ public class ExternalSalesForceSource implements ExternalDataSource {
      */
     public void processQuery(String sobjectType, String query, ExtDataProcessor edp) throws AsyncApiException, ConnectionException, IOException, InterruptedException {
 
-        final org.salesforce.Util util = new org.salesforce.Util();
+//        System.setProperty("password", properties.getProperty(ConnectionParameters.PASSWORD));
+//        System.setProperty("username", properties.getProperty(ConnectionParameters.USERNAME));
+//        System.setProperty("clientId", properties.getProperty(ConnectionParameters.CONSUMER_KEY));
+//        System.setProperty("clientSecret", properties.getProperty(ConnectionParameters.CONSUMER_SECRET));
+        final org.salesforce.Util util = new SforceUtil(properties);
         final SObject sObject = new SObject(sobjectType, util);
         String nextRecordsQuery = null;
         do {
